@@ -1,34 +1,14 @@
-const navs=document.querySelectorAll('.nav-item');
-const pages=document.querySelectorAll('.page');
+const toggle = document.getElementById('menuToggle');
+const sidebar = document.querySelector('.sidebar');
+const navItems = document.querySelectorAll('.nav-item');
 
-const menuBtn=document.querySelector('.menu-btn');
-const sidebar=document.querySelector('.sidebar');
-
-
-navs.forEach(nav=>{
-
-nav.addEventListener('click',()=>{
-
-navs.forEach(n=>n.classList.remove('active'));
-pages.forEach(p=>p.classList.remove('active'));
-
-nav.classList.add('active');
-
-const target=nav.dataset.page;
-
-document
-.getElementById(target)
-.classList.add('active');
-
-sidebar.classList.remove('show');
-
+toggle.addEventListener('click', () => {
+  sidebar.classList.toggle('collapsed');
 });
 
-});
-
-
-menuBtn.addEventListener('click',()=>{
-
-sidebar.classList.toggle('show');
-
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    navItems.forEach(n => n.classList.remove('active'));
+    item.classList.add('active');
+  });
 });

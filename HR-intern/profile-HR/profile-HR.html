@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile-HR.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Tel<span>Ship</span></h2>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="/HR-intern/dashboard-HR/dash-HR.html" class="nav-item">
+                    <span>🏠︎</span><span class="label">Dashboard</span>
+                </a>
+                <a class="nav-item active">
+                    <span>👤</span><span class="label">Profil</span>
+                </a>
+                <a href="/HR-intern/pengajuan-HR/permohonan.html" class="nav-item">
+                    <span>✚</span><span class="label">Permohonan</span>
+                </a>
+                <a href="#" class="nav-item logout">
+                    <span>➜]</span><span class="label">Keluar</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-btn" id="menuToggle">☰</button>
+                    <img src="/images/logo.png" class="logo">
+                </div>
+
+                <div class="topbar-right">
+                    <span class="notif">🔔</span>
+                    <img src="/images/profil.user.jpg" class="avatar">
+                    <span class="username">Admin</span>
+                </div>
+            </header>
+
+            <!-- MAIN -->
+            <main class="main-content">
+
+                <h1 class="page-title">Profil</h1>
+
+                <!-- CARD PROFIL -->
+                <section class="profile-header">
+                    <img src="/images/profil.user.jpg" class="profile-photo">
+
+                    <div class="profile-text">
+                        <h2 id="fullName">Lala po</h2>
+                        <p id="profileStatus">Human Resources Department</p>
+                    </div>
+                </section>
+
+                <!-- INFORMASI PRIBADI -->
+                <section class="info-card">
+                    <div class="info-header">
+                        <h3>Informasi Pribadi</h3>
+                        <button class="edit-btn" id="editBtn">✎ Edit</button>
+                    </div>
+
+                    <div class="info-grid">
+                        <div>
+                            <span>Nama Depan</span>
+                            <strong id="firstName">ragil</strong>
+                        </div>
+                        <div>
+                            <span>Nama Belakang</span>
+                            <strong id="lastName">Natashia</strong>
+                        </div>
+                        <div>
+                            <span>Tanggal Lahir</span>
+                            <strong id="birthDate">29 Februari 2004</strong>
+                        </div>
+                        <div>
+                            <span>Email</span>
+                            <strong id="email">setyanatashiaa@gmail.com</strong>
+                        </div>
+                        <div>
+                            <span>No Handphone</span>
+                            <strong id="phone">08575432011</strong>
+                        </div>
+                        <div>
+                            <span>Status</span>
+                            <strong id="infoStatus">Mahasiswa</strong>
+                        </div>
+                    </div>
+                </section>
+                <!-- ALAMAT -->
+                <section class="info-card">
+                    <div class="info-header">
+                        <h3>Alamat</h3>
+                        <button class="edit-btn" id="editAddressBtn">✎ Edit</button>
+                    </div>
+
+                    <div class="info-grid">
+                        <div>
+                            <span>Kabupaten/Kota</span>
+                            <strong id="city">Purwokerto</strong>
+                        </div>
+                        <div>
+                            <span>Provinsi</span>
+                            <strong id="province">Jawa Tengah</strong>
+                        </div>
+                        <div>
+                            <span>Kode Pos</span>
+                            <strong id="postalCode">53116</strong>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODAL EDIT INFORMASI PRIBADI -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Informasi Pribadi</h3>
+                <button id="closeModal">✕</button>
+            </div>
+
+            <div class="modal-body">
+                <label>Nama Depan
+                    <input id="editFirstName">
+                </label>
+                <label>Nama Belakang
+                    <input id="editLastName">
+                </label>
+                <label>Tanggal Lahir
+                    <input id="editBirthDate">
+                </label>
+                <label>Email
+                    <input id="editEmail">
+                </label>
+                <label>No Handphone
+                    <input id="editPhone">
+                </label>
+                <label>Status
+                    <input id="editStatus">
+                </label>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-primary" id="saveBtn">Save</button>
+                <button class="btn-secondary" id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL EDIT ALAMAT -->
+<div class="modal" id="alamatModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Alamat</h3>
+      <button id="closeAlamat">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <label>
+        Kabupaten/Kota
+        <input type="text" id="editKota" placeholder="Kabupaten / Kota">
+      </label>
+
+      <label>
+        Provinsi
+        <input type="text" id="editProvinsi" placeholder="Provinsi">
+      </label>
+
+      <label>
+        Kode Pos
+        <input type="text" id="editKodePos" placeholder="Kode Pos">
+      </label>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-primary" id="saveAlamat">Save</button>
+      <button class="btn-secondary" id="cancelAlamat">Cancel</button>
+    </div>
+  </div>
+</div>
+
+    <script src="/intern/profile/profile.js"></script>
+</body>
+</html>
