@@ -32,7 +32,7 @@
                 <a href="/intern/pengajuan/pengajuan.html" class="nav-item">
                     <span>✚</span><span class="label">Pengajuan</span>
                 </a>
-                <a href="#" class="nav-item logout">
+                <a href="/intern/login/login.html" class="nav-item logout">
                     <span>➜]</span><span class="label">Keluar</span>
                 </a>
             </nav>
@@ -167,37 +167,38 @@
     </div>
 
     <!-- MODAL EDIT ALAMAT -->
-<div class="modal" id="alamatModal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3>Alamat</h3>
-      <button id="closeAlamat">✕</button>
+    <div class="modal" id="alamatModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Alamat</h3>
+                <button id="closeAlamat">✕</button>
+            </div>
+
+            <div class="modal-body">
+                <label>
+                    Kabupaten/Kota
+                    <input type="text" id="editKota" placeholder="Kabupaten / Kota">
+                </label>
+
+                <label>
+                    Provinsi
+                    <input type="text" id="editProvinsi" placeholder="Provinsi">
+                </label>
+
+                <label>
+                    Kode Pos
+                    <input type="text" id="editKodePos" placeholder="Kode Pos">
+                </label>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-primary" id="saveAlamat">Save</button>
+                <button class="btn-secondary" id="cancelAlamat">Cancel</button>
+            </div>
+        </div>
     </div>
-
-    <div class="modal-body">
-      <label>
-        Kabupaten/Kota
-        <input type="text" id="editKota" placeholder="Kabupaten / Kota">
-      </label>
-
-      <label>
-        Provinsi
-        <input type="text" id="editProvinsi" placeholder="Provinsi">
-      </label>
-
-      <label>
-        Kode Pos
-        <input type="text" id="editKodePos" placeholder="Kode Pos">
-      </label>
-    </div>
-
-    <div class="modal-footer">
-      <button class="btn-primary" id="saveAlamat">Save</button>
-      <button class="btn-secondary" id="cancelAlamat">Cancel</button>
-    </div>
-  </div>
-</div>
 
     <script src="profile.js"></script>
 </body>
+
 </html>

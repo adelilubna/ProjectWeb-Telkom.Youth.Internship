@@ -50,15 +50,15 @@ menuToggle.onclick = () => {
 };
 
 editAddressBtn.onclick = () => {
-  addressModal.classList.add('show');
+    addressModal.classList.add('show');
 
-  editKota.value = kotaText.textContent;
-  editProvinsi.value = provinsiText.textContent;
-  editKodePos.value = kodePosText.textContent;
+    editKota.value = kotaText.textContent;
+    editProvinsi.value = provinsiText.textContent;
+    editKodePos.value = kodePosText.textContent;
 };
 
 closeAlamat.onclick = cancelAlamat.onclick = () => {
-  addressModal.classList.remove('show');
+    addressModal.classList.remove('show');
 };
 
 
