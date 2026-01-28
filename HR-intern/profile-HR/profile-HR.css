@@ -21,7 +21,6 @@ body {
     height: 100vh;
 }
 
-/* SIDEBAR */
 .sidebar {
     width: 240px;
     background: #fff;
@@ -87,15 +86,12 @@ body {
     display: none;
 }
 
-
-/* CONTENT */
 .content {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* TOPBAR */
 .topbar {
     height: 60px;
     background: #fff;
@@ -152,7 +148,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* === PROFILE HEADER === */
 .profile-header {
     background: #fff;
     border-radius: 16px;
@@ -245,7 +240,6 @@ body {
     color: #6b7280;
 }
 
-/* MODAL */
 :root {
     --primary: #0b2a6f;
     --bg: #f5f7fb;
@@ -314,7 +308,6 @@ body {
     color: #6b7280;
 }
 
-/* MODAL */
 .modal {
     position: fixed;
     inset: 0;
