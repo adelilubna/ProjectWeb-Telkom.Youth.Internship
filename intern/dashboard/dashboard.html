@@ -46,7 +46,26 @@
         </div>
 
         <div class="topbar-right">
-          <span class="notif">🔔</span>
+          <div class="notif-wrapper">
+            <button class="notif-btn" id="notifBtn">
+              🔔
+              <span class="notif-badge">3</span>
+            </button>
+
+            <div class="notif-panel" id="notifPanel">
+
+              <h4>Notifikasi</h4>
+
+              <div class="notif-item">Selamat! Anda lolos tahap administrasi</div>
+              <div class="notif-item">Silakan lengkapi berkas sebelum 5 Februari 2026</div>
+              <div class="notif-item">Pengumuman hasil seleksi akan diinformasikan melalui sistem</div>
+
+              <p class="notif-empty">Tidak ada notifikasi lain</p>
+
+            </div>
+
+          </div>
+
           <img src="/images/profil.user.jpg" class="avatar">
           <span class="username">Setya</span>
         </div>
@@ -57,69 +76,153 @@
 
         <section class="banner">
           <div class="banner-text">
-            <h1>Selamat Datang</h1>
+            <h1>Selamat Datang !</h1>
             <p>
-              Telkom Youth Internship merupakan program magang
-              yang dilaksanakan di Telkom Witel Purwokerto.
+              Telkom Youth Internship merupakan program magang yang diselenggarakan
+              oleh Telkom Witel Purwokerto sebagai wadah pengembangan potensi generasi muda.
+              Program ini bertujuan memberikan pengalaman kerja nyata, meningkatkan
+              keterampilan profesional, serta mempersiapkan peserta menghadapi dunia industri.
             </p>
           </div>
-
           <img src="/images/bg.dash.png" class="banner-img">
         </section>
 
-        <section class="timeline">
-
-          <div class="timeline-steps">
-            <h2>Tahapan Pendaftaran Magang</h2>
-            <p class="subtitle">
-              Berikut tahap-tahap pendaftaran magang di Telkom Purwokerto
-            </p>
-
-            <div class="timeline-item">
-              <span class="dot"></span>
-              <div class="timeline-content">
-                <h4>Registrasi dan Login Akun</h4>
-                <p>Lakukan registrasi pada web TelShip menggunakan email pribadi.</p>
-              </div>
+        <section class="status-card">
+          <div class="status-header">
+            <div>
+              <h2>Pengajuan</h2>
+              <p class="date">Tanggal Pengajuan : 10 Januari 2026</p>
             </div>
 
-            <div class="timeline-item">
-              <span class="dot"></span>
-              <div class="timeline-content">
-                <h4>Isi Data Pengajuan Magang</h4>
-                <p>Lengkapi data pengajuan magang melalui fitur pengajuan.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <span class="dot"></span>
-              <div class="timeline-content">
-                <h4>Kirim Data</h4>
-                <p>Submit data dan cek status secara berkala pada fitur status.</p>
-              </div>
-            </div>
+            <span class="status-badge">
+              ⏳ Sedang diproses
+            </span>
           </div>
 
-          <div class="timeline-illustration">
-            <img src="/images/dash.pict.jpeg">
+          <div class="status-box">
+            <h3>⏳ Sedang diproses</h3>
+            <p>Estimasi : 3 – 5 hari kerja</p>
           </div>
 
+          <div class="progress-wrapper">
+            <div class="progress-step done">
+              <span class="dot"></span>
+              <p>Registrasi</p>
+            </div>
+
+            <div class="progress-line done"></div>
+
+            <div class="progress-step done">
+              <span class="dot"></span>
+              <p>Pengajuan</p>
+            </div>
+
+            <div class="progress-line active"></div>
+
+            <div class="progress-step active">
+              <span class="dot"></span>
+              <p>Sedang diproses</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+              <span class="dot"></span>
+              <p>Hasil</p>
+            </div>
+          </div>
         </section>
 
-        <!-- FOOTER -->
-        <footer class="footer">
-          <h4>Witel Purwokerto</h4>
-          <p>
-            Jl. Gerilya Barat Tj. No.272–274, Tanjung, Bojong,
-            Kec. Purwokerto Selatan, Banyumas,
-            Jawa Tengah 53116
-          </p>
-          <h4>Contact Us</h4>
-          <p>📞 0896-6927-1980</p>
-        </footer>
+        <section class="process-card">
+          <h2 class="process-title">Pendaftaran Magang</h2>
 
+          <div class="process-steps">
+            <div class="process-step active">
+              <span class="step-dot"></span>
+              <h4>Registrasi dan Login Akun</h4>
+            </div>
+
+            <div class="process-step">
+              <span class="step-dot"></span>
+              <h4>Isi data pengajuan magang</h4>
+            </div>
+
+            <div class="process-step">
+              <span class="step-dot"></span>
+              <h4>Kirim Data</h4>
+            </div>
+
+          </div>
+
+          <div class="process-desc">
+
+            <p>Lakukan registrasi pada web TelShip dengan menggunakan email pribadi.</p>
+            <p>Lakukan pengisian data pengajuan magang dengan memilih fitur pengajuan.</p>
+            <p>Klik submit dan cek secara berkala pada fitur status.
+              Apabila diterima maka pengajuan akan menampilkan approve.</p>
+          </div>
+        </section>
+
+        <section class="univ-card">
+          <h2 class="univ-title">
+            Perguruan Tinggi yang telah bergabung
+          </h2>
+
+          <div class="univ-stats">
+
+            <div class="stat-box">
+              <img src="/images/icon-student.png" alt="">
+              <div>
+                <h3>120+</h3>
+                <p>Mahasiswa mendaftar</p>
+              </div>
+            </div>
+
+            <div class="stat-box">
+              <img src="/images/icon-campus.png" alt="">
+              <div>
+                <h3>15+</h3>
+                <p>Perguruan Tinggi</p>
+              </div>
+            </div>
+
+            <div class="stat-box">
+              <img src="/images/icon-location.png" alt="">
+              <div>
+                <h3>Lokasi</h3>
+                <p>Telkom Witel Purwokerto</p>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="univ-logos">
+
+            <img src="/images/logo-telu.png" alt="">
+            <img src="/images/logo-ump.png" alt="">
+            <img src="/images/logo-ugm.png" alt="">
+            <img src="/images/logo-undip.png" alt="">
+            <img src="/images/logo-uty.png" alt="">
+            <img src="/images/logo-itb.png" alt="">
+            <img src="/images/logo-unnes.png" alt="">
+            <img src="/images/logo-unsoed.png" alt="">
+
+          </div>
+        </section>
       </main>
 
+      <!-- FOOTER -->
+      <footer class="footer">
+        <h4>Witel Purwokerto</h4>
+        <p>
+          Jl. Gerilya Barat Tj. No.272–274, Tanjung, Bojong,
+          Kec. Purwokerto Selatan, Banyumas,
+          Jawa Tengah 53116
+        </p>
+        <h4>Contact Us</h4>
+        <p>📞 0896-6927-1980</p>
+      </footer>
     </div>
   </div>
 
