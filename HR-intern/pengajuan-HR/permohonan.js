@@ -159,3 +159,50 @@ function closeModal(id) {
     document.getElementById(id).classList.remove("show");
 }
 renderTable();
+
+let pendingStatus = null;
+
+function setStatus(status) {
+
+  if (status === "Ditolak" || status === "Mengundurkan Diri") {
+    pendingStatus = status;
+
+    document.getElementById("reasonTitle").innerText =
+      `Alasan ${status}`;
+
+    document.getElementById("reasonText").value = "";
+
+    document.getElementById("reasonModal")
+      .classList.add("show");
+
+    return;
+  }
+
+  applyStatus(status);
+}
+
+function submitReason() {
+  const reason = document.getElementById("reasonText").value.trim();
+
+  if (!reason) {
+    alert("Alasan wajib diisi");
+    return;
+  }
+
+  const d = getById(currentId);
+  d.status = pendingStatus;
+  d.reason = reason;
+
+  closeModal("reasonModal");
+  closeModal("statusModal");
+
+  renderTable();
+}
+
+function applyStatus(status) {
+  const d = getById(currentId);
+  d.status = status;
+
+  closeModal("statusModal");
+  renderTable();
+}

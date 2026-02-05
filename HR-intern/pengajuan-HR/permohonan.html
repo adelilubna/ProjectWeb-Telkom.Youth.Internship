@@ -215,6 +215,24 @@
                         </button>
                     </div>
 
+                    <div class="modal" id="reasonModal">
+                        <div class="modal-content">
+                            <h3 id="reasonTitle"></h3>
+
+                            <textarea id="reasonText" placeholder="Tulis alasan..." rows="4"></textarea>
+
+                            <div class="action-group">
+                                <button class="btn btn-outline" onclick="closeModal('reasonModal')">
+                                    Batal
+                                </button>
+                                <button class="btn btn-green" onclick="submitReason()">
+                                    Simpan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
             <div class="modal" id="buktiModal">

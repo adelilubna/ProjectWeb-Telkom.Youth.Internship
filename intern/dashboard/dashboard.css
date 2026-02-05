@@ -98,6 +98,11 @@ body {
   flex-direction: column;
   grid-row: 1/2;
   grid-column: 2/3;
+  background: linear-gradient(
+      rgba(245,247,251,0.92),
+      rgba(245,247,251,0.92)
+    ),
+    url("/images/bg.dash.png") center/cover no-repeat;
 }
 
 .topbar {

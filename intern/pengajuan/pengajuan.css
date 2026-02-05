@@ -22,6 +22,7 @@ body {
 }
 
 .sidebar {
+  height: auto;
   width: 240px;
   background: #fff;
   color: #fc0909;
@@ -133,6 +134,15 @@ body {
 
 .main-content {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: 
+    linear-gradient(
+      rgba(245,247,251,0.92),
+      rgba(245,247,251,0.92)
+    ),
+    url("/images/bg.dash.png") center/cover no-repeat;
 }
 
 .page-title {
@@ -143,9 +153,23 @@ body {
 }
 
 .form-card {
-  background: #fff;
-  border: 2px solid var(--primary-dark);
-  border-radius: 4px;
+  position: relative;
+  background: rgba(255,255,255,0.92);
+  border: 3px solid var(--primary-dark);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/bg.dash.png") center/cover no-repeat;
+  opacity: 0.08;
+  z-index: 0;
 }
 
 .form-header {
@@ -156,29 +180,63 @@ body {
   align-items: center;
   gap: 8px;
   font-size: 14px;
+  position: relative;
+  z-index: 1;
 }
 
 .pengajuan-form {
   padding: 24px 32px;
-  max-width: 800px;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .form-row {
+  width: 100%;
   display: grid;
   grid-template-columns: 220px 1fr;
   align-items: center;
   margin-bottom: 14px;
+  border: 1px solid var(--primary-dark);
+  border-radius: 6px;
+  padding: 8px 15px;
+  background: rgba(255,255,255,0.9);
 }
 
 .form-row label {
   font-size: 13px;
   color: #1f2937;
+  font-weight: 500;
 }
 
 .form-row input {
-  padding: 8px 10px;
-  border: 1px solid #d1d5db;
-  border-radius: 2px;
+  width: 100%;
+  height: 38px;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  background: transparent;
+  color: #1f2937;
+  transition: all 0.2s ease;
+}
+
+.durasi-wrapper {
+  margin: -6px 0 14px 220px; 
+}
+
+.form-row:has(.durasi-info) {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.form-row input:focus-within{
+  outline:none;
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 2px rgba(11, 42, 111, 0.15);
+  background: #fff;
 }
 
 .file-row input {
@@ -193,11 +251,15 @@ body {
 
 .durasi-info {
   font-size: 13px;
-  color: #374151;
-  background: #f1f5f9;
-  padding: 8px 12px;
+  color: #0f172a;
+  background: rgba(241,245,249,0.9);
+  padding: 10px 14px;
   border-left: 4px solid var(--primary-dark);
-  border-radius: 4px;
+  border-radius: 6px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+
 }
 
 .btn-submit {

@@ -133,6 +133,12 @@ body {
 
 .main-content {
     padding: 30px;
+    background: 
+    linear-gradient(
+      rgba(245,247,251,0.92),
+      rgba(245,247,251,0.92)
+    ),
+    url("/images/bg.dash.png") center/cover no-repeat;
 }
 
 .page-title {
@@ -146,7 +152,8 @@ body {
     background: #fff;
     border-radius: 6px;
     padding: 0px;
-    max-width: 900px;
+    width: 100%;
+    max-width: none;
     overflow: hidden;
 }
 
@@ -197,3 +204,4 @@ body {
     background: #e5e7eb;
     color: #dc2626;
 }
+
